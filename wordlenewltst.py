@@ -102,15 +102,20 @@ def compute(w1, w2, w3, w4, w5, g1, g2, g3, g4, g5):
                 database2.append(i)
     else:
         database2 = database.copy()
+
     # print(database2)
-    if len(database2) == 1:
+    if len(database2) == 0:
+        print("No such word exists\n\n")
+        exit(0)
+    elif len(database2) == 1:
         print("\nYour word is surely -", database2[0])
         exit(0)
-    elif len(database2) > 1 and len(database2) < 11:
+    elif len(database2) > 1 and len(database2) < 31:
         print("Only possible answers are:")
         print(database2, "\n\n")
     else:
-        print("Too many possibilities still!\n\n")
+        print(
+            f"Too many possibilities still! ({len(database2)} possibilities)\n\n")
 
 
 print("Enter own word or use given suggestions.\nSuggestion 1 - R H Y M E")
@@ -120,7 +125,7 @@ print("Entered guess is - %s" % (" ".join(w1)))
 g1 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
 g1 = g1.upper()
 if g1 == "GGGGG":
-    print("\nYour word is -", w1)
+    print("\nYour word is surely -", w1)
     exit(0)
 compute(w1, w1, w1, w1, w1, g1, g1, g1, g1, g1)
 
@@ -131,7 +136,7 @@ print("Entered guess is - %s" % (" ".join(w2)))
 g2 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
 g2 = g2.upper()
 if g2 == "GGGGG":
-    print("\nYour word is -", w2)
+    print("\nYour word is surely -", w2)
     exit(0)
 compute(w1, w2, w2, w2, w2, g1, g2, g2, g2, g2)
 
@@ -142,7 +147,7 @@ print("Entered guess is - %s" % (" ".join(w3)))
 g3 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
 g3 = g3.upper()
 if g3 == "GGGGG":
-    print("\nYour word is -", w3)
+    print("\nYour word is surely -", w3)
     exit(0)
 compute(w1, w2, w3, w3, w3, g1, g2, g3, g3, g3)
 
@@ -153,7 +158,7 @@ print("Entered guess is - %s" % (" ".join(w4)))
 g4 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
 g4 = g4.upper()
 if g4 == "GGGGG":
-    print("\nYour word is -", w4)
+    print("\nYour word is surely -", w4)
     exit(0)
 compute(w1, w2, w3, w4, w4, g1, g2, g3, g4, g4)
 
@@ -164,6 +169,15 @@ print("Entered guess is - %s" % (" ".join(w5)))
 g5 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
 g5 = g5.upper()
 if g5 == "GGGGG":
-    print("\nYour word is -", w5)
+    print("\nYour word is surely -", w5)
     exit(0)
 compute(w1, w2, w3, w4, w5, g1, g2, g3, g4, g5)
+
+"""
+RAIN:
+grain
+brain
+drain
+
+badge
+"""
