@@ -5,6 +5,7 @@ arr = [i.strip().upper() for i in arr]
 
 print("WELCOME TO WORDLE!")
 input("PRESS ENTER TO CONTINUE...")
+print()
 
 
 def compute(w1, w2, w3, w4, w5, g1, g2, g3, g4, g5):
@@ -105,48 +106,63 @@ def compute(w1, w2, w3, w4, w5, g1, g2, g3, g4, g5):
     if len(database2) == 1:
         print("\nYour word is surely -", database2[0])
         exit(0)
-    elif len(database2) > 1 and len(database2) < 9:
+    elif len(database2) > 1 and len(database2) < 11:
         print("Only possible answers are:")
         print(database2, "\n\n")
     else:
         print("Too many possibilities still!\n\n")
 
 
-print("My first guess is - R H Y M E")
-w1 = "RHYME"
+print("Enter own word or use given suggestions.\nSuggestion 1 - R H Y M E")
+w1 = input("Enter first word - ")
+w1 = w1.upper()
+print("Entered guess is - %s" % (" ".join(w1)))
 g1 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
+g1 = g1.upper()
 if g1 == "GGGGG":
     print("\nYour word is -", w1)
     exit(0)
 compute(w1, w1, w1, w1, w1, g1, g1, g1, g1, g1)
 
-print("My second guess is - P L A N T")
-w2 = "PLANT"
+print("Enter own word or use given suggestions.\nSuggestion 2 - P L A N T")
+w2 = input("Enter second word - ")
+w2 = w2.upper()
+print("Entered guess is - %s" % (" ".join(w2)))
 g2 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
+g2 = g2.upper()
 if g2 == "GGGGG":
     print("\nYour word is -", w2)
     exit(0)
 compute(w1, w2, w2, w2, w2, g1, g2, g2, g2, g2)
 
-print("My third guess is - S Q U I Z")
-w3 = "SQUIZ"
+print("Enter own word or use given suggestions.\nSuggestion 3 - S Q U I Z")
+w3 = input("Enter third word - ")
+w3 = w3.upper()
+print("Entered guess is - %s" % (" ".join(w3)))
 g3 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
+g3 = g3.upper()
 if g3 == "GGGGG":
     print("\nYour word is -", w3)
     exit(0)
 compute(w1, w2, w3, w3, w3, g1, g2, g3, g3, g3)
 
-print("My fourth guess is - F J O R D")
-w4 = "FJORD"
+print("Enter own word or use given suggestions.\nSuggestion 4 - F J O R D")
+w4 = input("Enter fourth word - ")
+w4 = w4.upper()
+print("Entered guess is - %s" % (" ".join(w4)))
 g4 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
+g4 = g4.upper()
 if g4 == "GGGGG":
     print("\nYour word is -", w4)
     exit(0)
 compute(w1, w2, w3, w4, w4, g1, g2, g3, g4, g4)
 
-print("My fifth guess is - B L O C K")
-w5 = "BLOCK"
+print("Enter own word or use given suggestions.\nSuggestion 5 - B L O C K")
+w5 = input("Enter fifth word - ")
+w5 = w5.upper()
+print("Entered guess is - %s" % (" ".join(w5)))
 g5 = input("Enter the result as a string of W, Y, G (White, Yellow, Green) - ")
+g5 = g5.upper()
 if g5 == "GGGGG":
     print("\nYour word is -", w5)
     exit(0)
